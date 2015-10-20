@@ -1,14 +1,24 @@
 Wikipedia Infobox Parser  
 ======
-[![build status](https://travis-ci.org/zp-j/wikiparser.svg?branch=master)](https://travis-ci.org/zp-j/wikiparser) [![npm version](https://badge.fury.io/js/wiki-infobox-parser.svg)](https://badge.fury.io/js/wiki-infobox-parser)
+[![build status](https://travis-ci.org/zp-j/wiki-infobox-parser.svg?branch=master)](https://travis-ci.org/zp-j/wiki-infobox-parser) [![npm version](https://badge.fury.io/js/wiki-infobox-parser.svg)](https://badge.fury.io/js/wiki-infobox-parser)
 
-A cool parser for [Wikipedia Inforbox](https://en.wikipedia.org/wiki/Help:Infobox), as described in Wikipedia help page:
+A parser for [Wikipedia Inforbox](https://en.wikipedia.org/wiki/Help:Infobox), as described in Wikipedia help page:
 
 > An infobox is a fixed-format table designed to be added to the top right-hand corner of articles to consistently present a summary of some unifying aspect that the articles share and sometimes to improve navigation to other interrelated articles.
 
-[More examples can be found here.](http://zp-j.github.io/blog/2014/08/01/wikipedia-infobox-parser/)
+<img src="https://nodei.co/npm/wiki-infobox-parser.png?downloads=true&downloadRank=true"
+		 alt="alt nodejs_infobox_screenshot"
+		 width="300"
+		 height="60">
+
+ <img src="https://nodei.co/npm-dl/wiki-infobox-parser.png"
+ 		 alt="alt nodejs_infobox_screenshot"
+ 		 width="350"
+ 		 height="40.6">
 
 ## Features
+
+It's still on development, it needs to support more markup templates.
 
 - Get Wikipedia Infobox by keyword
 - Support keyword redirection
@@ -95,7 +105,7 @@ The parsed result is
 ![img](http://7sbqda.com1.z0.glb.clouddn.com/Screen%20Shot%202015-10-20%20at%2001.25.49.png)
 
 - Please check this project on PivatalTracker: [https://www.pivotaltracker.com/n/projects/1451530](https://www.pivotaltracker.com/n/projects/1451530)
-- Github issue: [https://github.com/zp-j/wikiparser/issues](https://github.com/zp-j/wikiparser/issues)
+- Github issue: [https://github.com/zp-j/wiki-infobox-parser/issues](https://github.com/zp-j/wiki-infobox-parser/issues)
 
 Don't hesitate to contact me when you have any issue or idea about this parser, both PivotalTracker and Github issue are welcomed!
 
