@@ -28,4 +28,4 @@ build/Release
 node_modules
 
 # Local tests
-test/mytest.js
+test/mytests.js
