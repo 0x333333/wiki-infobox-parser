@@ -2,12 +2,12 @@
   "author": "Zhipeng Jiang <jesusjzp@gmail.com>",
   "name": "wiki-infobox-parser",
   "description": "Parser for Wikipedia Infobox.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "./index.js",
   "contributors": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zp-j/wikiparser.git"
+    "url": "https://github.com/zp-j/wiki-infobox-parser.git"
   },
   "engines": {
     "node": "*",
@@ -20,9 +20,9 @@
     "mocha": "*"
   },
   "bugs": {
-    "url": "https://github.com/zp-j/wikiparser/issues"
+    "url": "https://github.com/zp-j/wiki-infobox-parser/issues"
   },
-  "homepage": "https://github.com/zp-j/wikiparser",
+  "homepage": "https://github.com/zp-j/wiki-infobox-parser",
   "directories": {
     "test": "test"
   },
