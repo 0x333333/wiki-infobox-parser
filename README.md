@@ -112,7 +112,12 @@ Don't hesitate to contact me when you have any issue or idea about this parser, 
 ### Tests
 
 ```shell
+# Test with a small test cases set
 make test
+
+# Test with a full test cases set
+# It will take ~2mins, depending on the network
+make test-all
 ```
 
 Before sending a PR please add corresponding tests, thanks!
