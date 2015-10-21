@@ -4,7 +4,7 @@ var checkJson = require('../lib/utils').checkJson;
 
 /**
  * Load all keywords
- * from './data/actors.txt'
+ * from './data/cocktails.txt'
  */
 var fs = require('fs');
 var buffer, arr;

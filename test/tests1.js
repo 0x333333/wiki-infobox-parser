@@ -6,28 +6,44 @@ describe('Wikipedia text is parsed successfully.', function(done) {
 
   it('should return json data', function(done) {
     parser('france', function(err, result) {
-      assert.equal(true, checkJson(result));
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal(true, checkJson(result));
+      }
       done();
     });
   });
 
   it('should return json data', function(done) {
     parser('GitHub', function(err, result) {
-      assert.equal(true, checkJson(result));
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal(true, checkJson(result));
+      }
       done();
     });
   });
 
   it('should return json data', function(done) {
     parser('Stoic_(film)', function(err, result) {
-      assert.equal(true, checkJson(result));
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal(true, checkJson(result));
+      }
       done();
     });
   });
 
   it('should handle unexpected characters', function(done) {
     parser('Lewis–Clark_State_College', function(err, result) {
-      assert.equal(true, checkJson(result));
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal(true, checkJson(result));
+      }
       done();
     });
   });
@@ -37,22 +53,38 @@ describe('Wikipedia text is parsed successfully.', function(done) {
 describe('List templates are parsed.', function(done) {
   it('should parse unbulleted list', function(done) {
     parser('france', function(err, result) {
-      assert.equal('Euro (EUR), CFP franc (XPF)', JSON.parse(result).currency);
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal('Euro (EUR), CFP franc (XPF)', JSON.parse(result).currency);
+      }
       done();
     });
   });
 
   it('should parse url', function(done) {
     parser('nodejs', function(err, result) {
-      assert.equal('//nodejs.org', JSON.parse(result).website);
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal('//nodejs.org', JSON.parse(result).website);
+      }
       done();
     });
   });
 
   it('should parse start date', function(done) {
     parser('nodejs', function(err, result) {
-      assert.equal('2009/05/27', JSON.parse(result).released);
-      assert.equal('2015/10/13', JSON.parse(result)['latest release date']);
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal('2009/05/27', JSON.parse(result).released);
+      }
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal('2015/10/13', JSON.parse(result)['latest release date']);
+      }
       done();
     });
   });
@@ -62,7 +94,11 @@ describe('Wikipedia parser need to redirect.', function(done) {
 
   it('should return redirection', function(done) {
     parser('nodejs', function(err, result) {
-      assert.equal(-1, result.indexOf('REDIRECT'));
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal(-1, result.indexOf('REDIRECT'));
+      }
       done();
     });
   });
@@ -73,28 +109,44 @@ describe('Wikipedia parser returns not found.', function(done) {
 
   it('should return Page Index Not Found', function(done) {
     parser('nomatterwhathere', function(err, result) {
-      assert.equal('Page Index Not Found', err.message);
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal('Page Index Not Found', err.message);
+      }
       done();
     });
   });
 
   it('should return Infobox Not Found', function(done) {
     parser('mocha', function(err, result) {
-      assert.equal('Infobox Not Found', err.message);
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal('Infobox Not Found', err.message);
+      }
       done();
     });
   });
 
   it('should return Query Not Found', function(done) {
     parser('', function(err, result) {
-      assert.equal('Query Not Found', err.message);
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal('Query Not Found', err.message);
+      }
       done();
     });
   });
 
   it('should return Malformed Response Payload', function(done) {
     parser('Wy┼╝sza Szko┼éa Filologiczna', function(err, result) {
-      assert.equal('Page Index Not Found', err.message);
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal('Page Index Not Found', err.message);
+      }
       done();
     });
   });
