@@ -1,7 +1,17 @@
-test:
-		./node_modules/.bin/mocha ./test/tests1.js --timeout 10000 --recursive -b --reporter spec
+BIN         = ./node_modules/.bin
+MOCHA       = $(BIN)/mocha
+JSHINT      = $(BIN)/jshint
+MOCHA_OPTS  = --timeout 2000 --recursive -b
+TEST_FILE   = ./test/tests1.js
+TEST_FILES  = ./test
+
+lint:
+	$(JSHINT) lib/* test/*
+
+test: lint
+	$(MOCHA) $(MOCHA_OPTS) --reporter spec $(TEST_FILE)
 
 test-all:
-	./node_modules/.bin/mocha --timeout 10000 --recursive -b --reporter spec
+	$(MOCHA) $(MOCHA_OPTS) --reporter spec $(TEST_FILES)
 
 .PHONY: test

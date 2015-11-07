@@ -109,44 +109,21 @@ describe('Wikipedia parser returns not found.', function(done) {
 
   it('should return Page Index Not Found', function(done) {
     parser('nomatterwhathere', function(err, result) {
-      if (err) {
-        console.error(err);
-      } else {
-        assert.equal('Page Index Not Found', err.message);
-      }
-      done();
-    });
-  });
-
-  it('should return Infobox Not Found', function(done) {
-    parser('mocha', function(err, result) {
-      if (err) {
-        console.error(err);
-      } else {
-        assert.equal('Infobox Not Found', err.message);
-      }
+      assert.equal('Page Index Not Found', err.message);
       done();
     });
   });
 
   it('should return Query Not Found', function(done) {
     parser('', function(err, result) {
-      if (err) {
-        console.error(err);
-      } else {
-        assert.equal('Query Not Found', err.message);
-      }
+      assert.equal('Query Not Found', err.message);
       done();
     });
   });
 
   it('should return Malformed Response Payload', function(done) {
     parser('Wy┼╝sza Szko┼éa Filologiczna', function(err, result) {
-      if (err) {
-        console.error(err);
-      } else {
-        assert.equal('Page Index Not Found', err.message);
-      }
+      assert.equal('Page Index Not Found', err.message);
       done();
     });
   });
