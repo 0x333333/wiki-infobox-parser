@@ -1,7 +1,7 @@
 BIN         = ./node_modules/.bin
 MOCHA       = $(BIN)/mocha
 JSHINT      = $(BIN)/jshint
-MOCHA_OPTS  = --timeout 2000 --recursive -b
+MOCHA_OPTS  = --timeout 5000 --recursive -b
 TEST_FILE   = ./test/tests1.js
 TEST_FILES  = ./test
 
