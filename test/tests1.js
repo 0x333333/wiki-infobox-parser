@@ -48,6 +48,17 @@ describe('Wikipedia text is parsed successfully.', function(done) {
     });
   });
 
+  it('should handle the \'=\' issue', function(done) {
+    parser('china', function(err, result) {
+      if (err) {
+        console.error(err);
+      } else {
+        assert.equal('People\'s Republic of China', JSON.parse(result).conventional_long_name);
+      }
+      done();
+    });
+  });
+
 });
 
 describe('List templates are parsed.', function(done) {
