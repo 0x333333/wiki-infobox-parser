@@ -14,4 +14,7 @@ test: lint
 test-all:
 	$(MOCHA) $(MOCHA_OPTS) --reporter spec $(TEST_FILES)
 
+deploy: test
+	npm version patch && git push --tags origin `git rev-parse --abbrev-ref HEAD`
+
 .PHONY: test
