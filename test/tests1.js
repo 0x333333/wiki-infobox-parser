@@ -83,7 +83,7 @@ describe('List templates are parsed.', function(done) {
       if (err) {
         console.error(err);
       } else {
-        assert.equal('2015/10/13', JSON.parse(result)['latest release date']);
+        assert.equal('2015/10/29', JSON.parse(result)['latest release date']);
       }
       done();
     });
